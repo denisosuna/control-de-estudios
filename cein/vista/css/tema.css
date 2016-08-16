@@ -1,0 +1,155 @@
+body{
+  font-family: arial;
+  margin: 0px;
+   background-color: #e6e6e6;
+}
+
+
+/*  boton
+ *  ==========================================================================
+ */
+
+/* Etiqueta <button> */
+
+.boton{
+  background-color: #00638a;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  transition-duration: 300ms;
+
+}
+
+
+
+.boton:hover{
+  background-color: #2b8fc8;
+  transition-duration: 300ms;
+}
+
+.boton:active{
+  background-color: #1f6790;
+  transition-duration: 300ms;
+}
+
+/* Etiqueta <a href...> */
+
+.boton_link{
+  background-color: #00638a;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition-duration: 300ms;
+
+}
+
+.boton_link:hover{
+  background-color: #2b8fc8;
+  transition-duration: 300ms;
+}
+
+.boton_link:active{
+  background-color: #1f6790;
+  transition-duration: 300ms;
+}
+
+
+
+
+
+
+
+/*  input text
+ *  ==========================================================================
+ */
+
+
+.input_text{
+  outline: none;
+  border: 1px solid #9b9b9b;
+  box-sizing: border-box;
+  transition-duration: 300ms;
+}
+
+.input_text:focus{
+  box-shadow: 0px 0px 2px #00638a;
+
+}
+
+
+
+
+
+/*  contenedor
+ *  ==========================================================================
+ */
+
+
+
+ .contenedor{
+   width: 1000px;
+   min-height: 350px;
+   left: 50%;
+   margin-left: -500px;
+   background-color: #e6e6e6;
+   position: relative;
+   height:100%;
+  
+  
+ }
+
+
+ /*  cabecera
+  *  ==========================================================================
+  */
+
+
+.cabecera{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background-color: #00638a;
+  z-index: 100;
+  top: 0px;
+  box-shadow: 0px 0px 10px #3d3d3d;
+}
+
+.logo_index{
+	top: 0px;
+	height: 70px;
+	position: relative;
+
+}
+.logo{
+	top: 0px;
+	height: 200px;
+	position: relative;
+	}
+
+.nom_colegio{
+  top: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  float: left;
+  left: 50%;
+  margin-left: -146px;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+.nom_sistema{
+  top: 29px;
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  float: left;
+  left: 50%;
+  margin-left: -110px;
+  font-family: 'Ubuntu', sans-serif;
+}

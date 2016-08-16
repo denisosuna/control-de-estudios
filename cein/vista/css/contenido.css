@@ -1,0 +1,9 @@
+.contenido{
+	position: absolute;
+	left: 200px;
+	top: 69px;
+	padding: 20px;
+	width: 757px;
+	overflow: auto;
+	
+	}
