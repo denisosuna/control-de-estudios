@@ -1,0 +1,134 @@
+.contenido{
+	width: 743px;
+	position: absolute;
+	left: 200px;
+	top: 70px;
+	overflow: auto;
+	height: 380px;
+	padding: 30px;
+}
+
+
+
+
+/*inicio registro*/
+
+h1, h2, h3, h4, h5, h6, a {
+  margin:0; padding:0;
+}
+.contenedor-registrar {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.registro-cabecera {
+  color:#fff;
+  text-align:center;
+  font-size:300%;
+}
+.registro-cabecera h5 {
+   text-shadow: 0px 5px 15px #000;
+}
+
+.formulario-registro {
+  border:2px solid #999;
+  background:#2c3e50;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+}
+.label h3 {
+  
+  color:#fff;
+}
+.formulario-registro {
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 20px auto;
+	text-align: center;
+	overflow: hidden;
+}
+
+.registrar input[type="text"],
+.registrar input[type="password"] {
+	width: 100%;
+	max-width: 150px;
+	height: 30px;
+	font-family: 'Ubuntu', sans-serif;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: 2px solid #f2f2f2;
+	outline: none;
+	padding-left: 10px;
+  
+}
+
+
+ 
+
+   
+ button[type="submit"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+   margin:10px auto;
+   
+ 
+}
+button[type="reset"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+   margin:10px auto;
+   
+}
+
+
+
+
+
+.tabla_registro {
+	
+	
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin-left: 120px;
+	
+}
+.tabla_registro > td{
+	margin-left:20px;
+	margin-right:20px;
+	
+	
+	
+	}
+
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 530px){
+	
+  .formulario-registro h3 {
+    text-align:center;
+    margin:0;
+  }
+
+  .login-button {
+    margin-bottom:10px;
+  }
+}
+
+
+
+

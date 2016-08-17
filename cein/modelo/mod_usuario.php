@@ -9,6 +9,8 @@
     private $contraseña;
     private $nombre;
     private $apellido;
+	private $mcedula;
+	
 	
 	
 
@@ -22,6 +24,7 @@
       $this->contraseña = $contraseña;
       $this->nombre   = $nombre;
       $this->apellido = $apellido;
+	  $this->mcedula = $mcedula;
 	  
  
     }
@@ -55,7 +58,7 @@
 
 
     //Consultar una cuenta
-    public function consultar_una_cuenta($pgcon, $cedula){
+    public function consultar_un_usuario($pgcon, $cedula){
       $sql = pg_query($pgcon, "SELECT * FROM usuario WHERE cedula='$cedula'");
       $resultado = pg_fetch_assoc($sql);
       return $resultado;
@@ -63,7 +66,7 @@
 
 
     // Eliminar cuenta
-    public function eliminar_cuenta($pgcon, $cedula){
+    public function eliminar_usuario($pgcon, $cedula){
       pg_query($pgcon, "DELETE FROM usuario WHERE cedula= '$cedula'");
     }
 
@@ -77,8 +80,8 @@
 
     // Modificar cuenta usuario
   
-  public function modificar_cuenta($pgcon, $cedula, $contraseña, $nombre, $apellido){
-      pg_query($pgcon, "UPDATE usuario SET  contraseña = '$contraseña', nombre = '$nombre', apellido = '$apellido', cedula = '$cedula' WHERE cedula = '$cedula'");
+  public function modificar_usuario($pgcon, $cedula, $contraseña, $nombre, $apellido,$mcedula){
+      pg_query($pgcon, "UPDATE usuario SET  contraseña = '$contraseña', nombre = '$nombre', apellido = '$apellido', cedula = '$cedula' WHERE cedula = '$mcedula'");
     }
 
 
