@@ -38,7 +38,7 @@
 
 
   <div class="cabecera">
-  
+   <a ><img src="../../../img/logo.jpg" class="logo_total" /></a>
     <p class="nom_colegio"> C.E.I.N CYNTHIA ROSENBERG</p>
 	  <p class="nom_sistema">sistema de control de estudios</p>
   </div><!--fin cabecera -->

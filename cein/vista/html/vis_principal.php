@@ -37,16 +37,18 @@
 
 <body>
 
-
   <div class="cabecera">
  
+
     <p class="nom_colegio"> C.E.I.N CYNTHIA ROSENBERG</p>
 	  <p class="nom_sistema">sistema de control de estudios</p>
   </div><!--fin cabecera -->
 
 
 <div class="contenedor">
+<a ><img src="../img/logo.jpg" class="logo_total" /></a>
   <?php
+  
     include("menu.php");   
   ?>
   <div class="contenido"> 

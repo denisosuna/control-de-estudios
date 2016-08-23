@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+function mostrarOcultar(obj)
+{
+    if(obj.value == "1") {
+        fvalida.dtrabajam.style.visibility = (obj.checked) ? 'visible' : 'hidden';
+		   fvalida.dtrabajap.style.visibility = (obj.checked) ? 'visible' : 'hidden';
+    }
+    if(obj.value == "2") {
+        fvalida.dtrabajap.style.visibility = (obj.checked) ? 'visible' : 'hidden';
+    }
+}
+</script>
+</head>
+<body>
+<form name="fvalida" action="prueba.php" method="get">
+
+<input name="trabajam" type="checkbox" title="prueba" value="1" onClick=" return mostrarOcultar(this)">
+<input style="visibility:hidden;" name="dtrabajam" type="text" title="prueba" size="15" maxlength="15">
+
+<input name="trabajap" type="checkbox" title="PEP" value="2" onClick=" return mostrarOcultar(this)">
+<input style="visibility:hidden;" name="dtrabajap" title="PEP" type="text" size="15" maxlength="15">
+
+<input type="submit">
+</form>
+</body>
+</html>

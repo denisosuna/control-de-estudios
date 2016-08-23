@@ -1,11 +1,14 @@
 .contenido{
-	width: 743px;
 	position: absolute;
 	left: 200px;
 	top: 70px;
+	padding: 20px;
+	width: 780px;
 	overflow: auto;
-	height: 342px;
-	padding: 30px;
+	min-height:400px;
+	
+	height: 400px;
+	background:#e6e6e6;
 }
 .botones{
 	    float: left;

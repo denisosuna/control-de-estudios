@@ -4,7 +4,7 @@
 
   class cuenta_usuario{
     // Atributos
-
+/*
     private $cedula;
     private $contraseña;
     private $nombre;
@@ -29,6 +29,7 @@
  
     }
 
+*/
     // Agregar cuenta a la BD
     public function registrar_usuario($pgcon, $cedula, $contraseña, $nombre, $apellido){
 		

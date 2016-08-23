@@ -1,17 +1,17 @@
 
 <?php
-
+/*
   session_start();
   if ( isset ($_SESSION ["usuario"])){
-	  
+
    //break;
   }
   else{
 
     header ("Location:../../../qindex.php");
-	exit; 
+	exit;
   }
- 
+ */
 
 ?>
 
@@ -23,15 +23,21 @@
 <link href="../../css/principal.css" rel="stylesheet" type="text/css"><!-- estilo unico de esta pagina -->
 <link href="../../css/tema.css" rel="stylesheet" type="text/css"> <!-- estilo del tema -->
 <link href="../../css/menu.css" rel="stylesheet" type="text/css"><!-- estilo del menu -->
-<link href="../../css/contenido.css" rel="stylesheet" type="text/css"><!-- estilo del menu -->
-<link href="../../css/modal.css" rel="stylesheet" type="text/css" >
+<link href="../../css/contenido.css" rel="stylesheet" type="text/css"><!-- estilo del menu-->
 
 <script type="text/javascript" src="../../js/jquery-2.2.0.min.js"></script>
 <script type="text/javascript" src="../../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../../js/inscribir.js"></script>
 
 
 
+
+<!-- oculto --->
+
+<style media="screen">
+  .oculto .oculto2 {
+    display: none;
+  }
+</style>
 
 <title>Sistema de Control de Estudios</title>
 </head>
@@ -40,7 +46,7 @@
 
 
   <div class="cabecera">
-   
+
     <p class="nom_colegio"> C.E.I.N CYNTHIA ROSENBERG</p>
 	  <p class="nom_sistema">sistema de control de estudios</p>
   </div><!--fin cabecera -->
@@ -51,9 +57,9 @@
   <?php
     include("../menu.php");
   ?>
-  
+
   <div class="contenido">
- 
+
  <form id="formulario" method="post" action="prueba.php">
 	<fieldset><legend >Ficha de inscripción </legend>
     <fieldset>
@@ -62,7 +68,7 @@
 		<input name="finscripcion" type="date" /></label><br />
         <label>Cedula escolar:
 		<input name="cescolar" type="text"  /></label><br />
-     
+
 		<label>Primer Nombre:
 		<input name="pnombre" type="text"   /></label>
 		<label>Segundo Nombre:
@@ -71,7 +77,7 @@
 		<input name="papellido" type="text" /></label>
 		<label>Segundo Apellido:
 		<input name="sapellido" type="text"  /></label>
-        
+
         <label>Fecha de nacimiento:
 		<input name="fnacimiento" type="date" /></label>
          <label>Lugar de nacimiento:
@@ -85,7 +91,7 @@
 		</fieldset>
         <fieldset>
 		<legend>Datos de la madre </legend>
-     
+
 		<label>Primer Nombre:
 		<input name="pnombrem" type="text" /></label>
 		<label>Segundo Nombre:
@@ -114,7 +120,7 @@
 		  <option value="Superior_completa">Superior completa</option>
           <option value="Superior_no_completa">Superior no completa</option>
 		</select></label>
-           <label>¿Trabaja?
+        <label>¿Trabaja?
         <input type="checkbox" style="width:175px;" id="ck_trabajom" onchange="trabajo()"  name="trabajam" checked="CHECKED"  /></label>
         
         
@@ -123,10 +129,10 @@
          <label class="oculto2">¿donde trabaja?
         <input class="oculto2" type="text" name="dtrabajam"  /></label>
        </fieldset>
-       
+
          <fieldset>
 		<legend>Datos del padre </legend>
-     
+
 		<label>Primer Nombre:
 		<input name="pnombrep" type="text" /></label>
 		<label>Segundo Nombre:
@@ -155,6 +161,9 @@
 		  <option value="Superior_completa">Superior completa</option>
           <option value="Superior_no_completa">Superior no completa</option>
 		</select></label>
+
+
+
         <label style="">¿Trabaja?
         <input type="checkbox" style="width:175px;" id="ck_trabajop" onchange="trabajo()" name="trabajap" checked="CHECKED"  /></label>
 
@@ -163,36 +172,91 @@
         <label class="oculto">¿donde trabaja?
         <input class="oculto" type="text" name="dtrabajap"  /></label>
 
-       </fieldset>
-       
-      
+
+<script type="text/javascript">
+    function trabajo(){
+      var estado = document.getElementById("ck_trabajop");
+	  var estado2 = document.getElementById("ck_trabajom");
+      if(estado.checked){
+        $(".oculto").fadeIn();
+	
+      }
+      else{
+        $(".oculto").fadeOut();
+      }
+	  
+	   if(estado2.checked){
+        $(".oculto2").fadeIn();
+	
+      }
+      else{
+        $(".oculto2").fadeOut();
+      }
+	  
+	  
+	  
+    }
+</script>
+
+<!------------------------>
+
+
+        </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #modificado, mostrar input segun el entero - Requiere Jquery-->
        <fieldset><legend>Procedencia de Estudiante</legend>
-       
-       <label style="width:185px;">Este Preescolar:
-       <input type="radio"  name="procedencia" value="este_preescolar" /></label>
-            <label>Del hogar:
-       <input type="radio" name="procedencia" value="del_hogar" /></label>
-            <label>Otra:
-       <input type="radio" name="procedencia" value="otra_procedencia" /></label>
-            <label>Otra:
-       <input type="text" name="otra_procedencia" /></label><br/>
-       <label style="width:255px;">Hermano en el preescolar
-       <input type="checkbox" name="hermano_preescolar" value="hermano_preescolar" /></label>
-    
-       <label>Nombre:
-       <input type="text" name="nombre_hermano1"/></label>
-       <label>Grupo:
-     <select name="grupo_hermano1">
-          <option value=""></option>
-		  <option value="primer">Primer Grupo</option>
-		  <option value="segundo">Segundo Grupo</option>
-		  <option value="tercer">Tercer Grupo</option>
-		</select></label>
-       
+
+       <label style="width:185px;">Este Preescolar: <input type="radio"  name="procedencia" value="este_preescolar" /></label>
+       <label>Del hogar:<input type="radio" name="procedencia" value="del_hogar" /></label>
+       <label>Otra:<input type="radio" name="procedencia" value="otra_procedencia" /></label>
+       <label>Otra:<input type="text" name="otra_procedencia" /></label><br/>
+       <label style="width:255px;">Hermanos en el preescolar <input type="checkbox" name="hermano_preescolar" value="hermano_preescolar" /></label>
+
+        <label>¿Cuantos?<input type="number" style="width:80px;" id="cantidad_her" name="cuantos_hermanos" onblur="div_auto()" min="0" max="3"/></label><br/><!-- #onchange == en cada cambio -->
+        <div style="max-height:300px;
+        display:block;" id="div_hermanos">
+        
+  
+        </div>
+
+<script type="text/javascript">
+// en el input type number el --onblur="div_auto()"--
+// funciona cuendo se hace foco en el elemnto y luego fuere de el.
+
+  function div_auto(){
+    $(".remover").remove() // eliminar todos los elementos que contengan la clase remover
+	
+    var cantidad = document.getElementById("cantidad_her").value; // obtener el valor
+
+    for(var i = 0; i < cantidad; i++){
+      var input = $("input type=\"text\" class=\"remover \" name=\" hermanos_"+i+" \"/>"); // def del element
+	  $("#div_hermanos").append(input); //lo agrega al doom
+        
+	
+    }
+  }
+  //la clase "remover" la autilizo como auxiliar identificador, para eliminarlo despues...
+
+</script>
+<!-- #modificado, mostrar input segun el entero - Requiere Jquery-->
+
+
       </fieldset>
-       
+
        <fieldset>	<legend>En caso de emergencia</legend>
-       
+
        <label>Llamar a:
        <input type="text" name="llamar_emergencia" /> </label>
          <label>Telefono:
@@ -202,20 +266,20 @@
           <label>Fiebre alta suministrar:
        <input type="text" name="fiebre_suministrar" /></label>
        </fieldset>
-       
+
        <fieldset><legend>Información de salud</legend>
-       
+
        <label>¿Es asmatico?:
        <input type="checkbox" style="width:160px;"  name="asmatico" value="asmatico" /> </label>
             <label>Medicamento asma:
        <input type="text" name="medicamento_asma" /> </label>
-       
+
        <label>¿Es alergico?:
        <input type="checkbox" style="width:160px;"    name="alergico" value="alergico" /> </label>
-       
+
        <label>¿Que medicamento?:
        <input type="text" name="medicamento_alergia" /> </label><br  />
-        
+
         <label>Enfermedades padecidas:
        <input type="text" style="width:670px; " name="Enfermedades_padecidas" /> </label><br  />
         <label>¿Tratamiento especial?:
@@ -223,7 +287,7 @@
         <label>Explique:
        <input type="text" style="width:490px;" name="explica_tratamiento" /> </label><br  />
        <label><strong>Asiste a</strong>:<br  />
-       
+
        <label style="width:150px;">Psicologo:
         <input type="checkbox"   name="psicologo" value="psicologo" /> </label>
         <label>Psicopedagogo:
@@ -237,7 +301,7 @@
                   <label>Lugar:
            <input type="text" style="width:320px;" name="lugar_asistencia" /> </label><br  />
             <label><strong>Es:</strong>:<br  />
-       
+
        <label style="width:120px;">Activo:
         <input type="checkbox" style="text-align:left;"   name="activo" value="activo" /> </label>
         <label>Tranquilo:
@@ -248,10 +312,10 @@
         <input type="checkbox"  name="timido" value="timido"/> </label>
               <label style="width:120px;">Comunicativo:
         <input type="checkbox"  name="comunicativo" value="comunicativo"/> </label><br/>
-        
-        
+
+
             <label><strong>Vacunas:</strong>:<br  />
-       
+
          <label style="width:120px;">BCG:
         <input type="checkbox"   name="bcg" value="bcg" /> </label>
         <label>Antipoliomelitica:
@@ -262,7 +326,7 @@
         <input type="checkbox"  name="antihepatities_a" value="antihepatities_a"/> </label>
               <label style="width:130px;">Antihepatities B :
         <input type="checkbox"  name="antihepatities_b" value="antihepatities_b"/> </label> <br/>
-            
+
              <label style="width:120px;">Triple Bacterina:
         <input type="checkbox"   name="triple_bacterina" value="triple_bacterina" /> </label>
         <label>Trivalente Viral:
@@ -272,7 +336,7 @@
            <label style="width:250px;">Antihaemophilus Influenzae tipo b:
         <input type="checkbox"  name="anti_influ_b" value="anti_influ_b"/> </label>
         <br/>
-      
+
         <label>Toxoide:
         <input type="checkbox"  name="toxoide" value="toxoide"/> </label>
          <label style="width:120px;"  >Ritavirus:
@@ -292,7 +356,7 @@
 		<input name="parentesco_retira1" type="text"  /></label>
         <label style="width:80px;">Edad:
 		<input name="edad_retira1" style="width:65px;" type="text"  /></label><br/>
-        
+
             <label style="width:120px;">Nombre:
 		<input name="nombre_retira2" type="text" style="width:100px;"   /></label>
 		<label style="width:120px;">Apellido:
@@ -303,7 +367,7 @@
 		<input name="parentesco_retira2" type="text"  /></label>
         <label style="width:80px;">Edad:
 		<input name="edad_retira2" style="width:65px;" type="text"  /></label><br/>
-        
+
             <label style="width:120px;">Nombre:
 		<input name="nombre_retira3" type="text" style="width:100px;"   /></label>
 		<label style="width:120px;">Apellido:
@@ -314,7 +378,7 @@
 		<input name="parentesco_retira3" type="text"  /></label>
         <label style="width:80px;">Edad:
 		<input name="edad_retira3" style="width:65px;" type="text"  /></label><br/>
-        
+
             <label style="width:120px;">Nombre:
 		<input name="nombre_retira4" type="text" style="width:100px;"   /></label>
 		<label style="width:120px;">Apellido:
@@ -337,65 +401,27 @@
 		<input name="telefono" type="text"  /></label><br/>
         <label style="width:165px;">Placa:
 		<input name="placa_transporte" style="width:150px;" type="text"  /></label>
-        
+
         <label style="width:450px;">Ruta:
 		<input name="ruta_transporte" style="width:495px;" type="text"  /></label><br/>
-        
-        
-        
-        
-        
-       
+
+
+
+
+
+
        </label>
-       
+
        </fieldset>
 
-       
-       
-		
+
+
+
 		<br  />
-       
+		<input type="submit" value="enviar" title="Enviar" class="enviar"  onclick="return confirm('¿Seguro que quiere proceder con la inscripción?')" />
 	</fieldset>
-    
-     
-<div id="Confirmar" class="modal_confirmacion">
-  <div class="modal_confirmacion_contenido " >
-  
-    <div class="centrar"><br>
-    
- 
-    
-    <div class="contenedor_modal" >
-    
-      <div class="contenido_modal">
-        
-              <h1>¿Quiere proceder con la inscripción?</h1>
-        <button class="w3-btn w3-green " type="submit">Confirmar</button>
-        <button onclick="document.getElementById('Confirmar').style.display='none'" type="button" class="w3-btn w3-red">Cancelar</button>
-       
-      </div>
-    </div>
- </div>
-  </div>
-</div>
+</form>
 
-
-
-<div class="pie_inscripcion2">
-  <button type="reset"   class="w3-btn w3-red pie_inscripcion2">Limpiar
-</button>   
-</div>
-
-</form>  
-
-<div class="pie_inscripcion">
-<button onclick="document.getElementById('Confirmar').style.display='block'" class="w3-btn w3-green">Inscribir</button> 
-
-</div>
-
-  
-  
-  
 </div><!--fin contenido -->
 </div><!--fin contenedor -->
 

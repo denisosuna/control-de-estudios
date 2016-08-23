@@ -1,9 +1,139 @@
+
 .contenido{
-	width: 743px;
 	position: absolute;
 	left: 200px;
 	top: 70px;
+	padding: 20px;
+	width: 780px;
 	overflow: auto;
-	height: 342px;
-	padding: 30px;
+	min-height:400px;
+	
+	height: 400px;
+	background:#e6e6e6;
+	}
+	
+<style type="text/css">
+body {
+	background-color: #333;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFF;
 }
+
+#formulario {
+	width: 770px;
+	margin: 0 auto;
+}
+
+#formulario fieldset {
+	border: 1px solid #C00;
+	display: block;
+}
+
+#formulario legend {
+	font-weight: bolder;
+	font-size: 18px;
+	padding: 0 5px;
+	
+
+}
+.direccion{
+	width:600px;
+	}
+
+#formulario label {
+	display: block;
+	
+	float: left;
+
+	
+    margin: 10px 2px 0 4px;
+}
+
+#formulario input , #formulario textarea, #formulario select {
+	
+	margin-bottom: 5px;
+	
+	display: block;
+	width: 150px;
+	
+	
+  border: 1px solid #DBE1EB;
+
+  font-size: 18px;
+
+  font-family: Arial, Verdana;
+
+  padding-left: 7px;
+
+  padding-right: 7px;
+
+  padding-top: 10px;
+
+  padding-bottom: 10px;
+
+  border-radius: 4px;
+
+  -moz-border-radius: 4px;
+
+  -webkit-border-radius: 4px;
+
+  -o-border-radius: 4px;
+
+  background: #FFFFFF;
+
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+
+  color: #2E3133;
+
+}
+
+#formulario input.enviar {
+
+
+	
+	width: 100px;
+	margin: 10px auto;
+}
+br {
+	clear: left;
+}
+.direccion{
+	width:600px;
+	}
+
+
+
+
+  .textbox:focus
+
+  {
+
+  color: #2E3133;
+
+  border-color: #FBFFAD;
+
+  }
+  
+  .pie_inscripcion{
+	display: block;
+    margin-top: -40px;
+    margin-left: 20%;
+	}
+	
+.pie_inscripcion2{
+	display: block;
+    margin-top: 10px;
+    margin-left: 40%;
+	z-index:100;
+	}
+  
+   .oculto .oculto2 {
+    display: none;
+  }

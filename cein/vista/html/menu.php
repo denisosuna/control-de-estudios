@@ -1,7 +1,8 @@
 <?php  session_start(); ?>
+
 <div class="menu_gral">
  <div class="logo">
-      <a href="../../qindex.php"><img src="../img/logo.jpg" width="200"  height="250"  class="logo"/></a>
+      <a href="../vis_principal.php"><img     width="200"  height="200"  class="logo"/></a>
     </div><!--fin logo -->
 
   <ul>

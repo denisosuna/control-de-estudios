@@ -3,7 +3,7 @@
   error_reporting(0);
   session_start();
   if ( isset ($_SESSION ["usuario"])){
-    header ("Location: ../vista/vis_principal.php");
+    header ("Location: vista/html/vis_principal.php");
 	exit; 
   }
   else{
@@ -38,7 +38,7 @@
 
 <body>
 
-   <div class="cabecera">
+   <div class="cabecera2">
     <div class="logo_index">
       <a href="qindex.php"><img src="vista/img/logo.jpg" height="70"  class="logo_index"/></a>
     </div><!--fin logo -->
@@ -50,7 +50,7 @@
 <div class="contenedor1">
 
     
-        <link href='http://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+      
 
 <div class="login">
 

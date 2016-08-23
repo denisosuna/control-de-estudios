@@ -25,7 +25,7 @@
 
 <body>
 
-   <div class="cabecera">
+   <div class="cabecera2">
     <div class="logo">
       <a href="../../../qindex.php"><img src="img/logo.jpg" height="67"  class="logo_index"/></a>
     </div><!--fin logo -->

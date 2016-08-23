@@ -93,7 +93,7 @@ body{
  .contenedor{
    width: 1000px;
    min-height: 350px;
-   left: 50%;
+   left: 49%;
    margin-left: -500px;
    background-color: #e6e6e6;
    position: relative;
@@ -116,6 +116,19 @@ body{
   z-index: 100;
   top: 0px;
   box-shadow: 0px 0px 10px #3d3d3d;
+  left:200px;
+ 
+}
+.cabecera2{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background-color: #00638a;
+  z-index: 100;
+  top: 0px;
+  box-shadow: 0px 0px 10px #3d3d3d;
+  
+ 
 }
 
 .logo_index{
@@ -124,11 +137,16 @@ body{
 	position: relative;
 
 }
-.logo{
-	top: 0px;
-	height: 200px;
-	position: relative;
-	}
+
+.logo_total{
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:4;
+	width:201px;
+	height:200px;
+	position:fixed;
+}
 
 .nom_colegio{
   top: 1px;
@@ -138,7 +156,7 @@ body{
   position: absolute;
   float: left;
   left: 50%;
-  margin-left: -146px;
+  margin-left: -250px;
    font-family: 'Ubuntu', sans-serif;
 }
 
@@ -150,7 +168,7 @@ body{
   position: absolute;
   float: left;
   left: 50%;
-  margin-left: -110px;
+  margin-left: -220px;
   font-family: 'Ubuntu', sans-serif;
 }
 
